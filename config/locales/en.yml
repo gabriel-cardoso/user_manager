@@ -1,0 +1,4 @@
+# English strings go here for Rails i18n
+en:
+  label_user_manager_new: New user manager
+  label_user_manager_plural: User managers

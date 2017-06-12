@@ -1,0 +1,6 @@
+<h2><%= t('label_user_manager_new') %></h2>
+
+<%= form_for @user_manager do |f| %>
+  <%= f.select :user_id, @users.collect {|u| [u.name, u.id]}, :required => true %>
+  <%= submit_tag l(:button_create) %>
+<%- end %>

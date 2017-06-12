@@ -1,0 +1,23 @@
+<p><%= link_to l(:label_user_manager_new), new_user_manager_path, :class => "icon icon-add" %></p>
+
+<% if @user_managers.any? %>
+  <table class="list users">
+    <thead><tr>
+      <th><%= l(:label_user) %></th>
+      <th style="width:15%"></th>
+    </tr></thead>
+    <tbody>
+    <% @user_managers.each do |user_manager| %>
+      <%- user = user_manager.user %>
+      <tr id="user-<%= user.id %>" class="<%= cycle 'odd', 'even' %>">
+        <td class="name"><%= link_to_user user %></td>
+        <td class="buttons">
+          <%= delete_link user_manager_path(user_manager), :back_url => request.original_fullpath %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>
