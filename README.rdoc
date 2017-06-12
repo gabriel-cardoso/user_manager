@@ -1,3 +1,7 @@
 = user_manager
 
-Description goes here
+Allows non-admin to create new users.
+
+Allows administrators to create User managers. A user manager will see a new
+entry in the top bar and will be able to list and create new users.
+
